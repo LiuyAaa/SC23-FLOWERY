@@ -13,7 +13,59 @@
 > This section slightly introduces FLOWERY workflow. To be updated soon.
 
 ## Environment Configuration
-> Before configuring the environments, please make sure your CPU supports at least 20 threads (checking by "nproc"), since fault injection experiments are time-consuming and should be accelerated in parallel.
+> Before configuring the environments, please **make sure you are using Intel CPU** and your CPU supports at least 20 threads (checking by "nproc"). There are two reasons: (1) Our assembly-level fault injection tool is tied to Intel PIN, which is a dynamic instrumentation tool for assembly code for Intel CPU; and (2)  fault injection experiments are usually time-consuming and should be accelerated in parallel.
+
+There are two methods to configure environments for FLOWERY: one is using the Docker image we prepared, the other one is manually setting up environments on your local Ubuntu 16.04 machine. **We highly recommend you use the Docker image we prepared**, because all the dependencies are already configured on that. Very easy to use :)! Please do not use zsh to run the scripts, since it will automatically shutdown some fault injection campaigns.
+
+### For those who use Docker (highly recommend!)
+To install Docker on your local **Linux** machine, you can follow the steps in this [LINK](https://docs.docker.com/engine/install/ubuntu/). You may also want to use Docker without sudo access (like I did in following commands), please check this [LINK](https://docs.docker.com/engine/install/linux-postinstall/). (ofc you can ignore this if you are expertise in Docker... orz)
+```bash
+# Download our prepared image from Docker Hub.
+docker pull hyfshishen/sc23-flowery-env
+
+# Execute this image to a running container.
+docker run -it hyfshishen/sc23-flowery-env /bin/bash
+```
+After you run this image as a running container, change directory to ```/root```, you can found LLFI, PINFI, and other dependencies have already installed! And you are ready to run FLOWERY.
+
+### For those who don't use Docker
+In this way, you need to configure the dependencies manually. The dependencies are listed as below:
+- Ubuntu 16.04
+- Python 2.7 and 3.5 (with PyYaml 4.2b4 installed)
+- Cmake (minimum v2.8)
+- tcsh
+- LLFI (LLVM-level Fault Injection Tool)
+- PINFI (Assembly-level Fault Injection Tool)
+
+Among those dependencies, LLFI and PINFI are two most important tools to FLOWERY workflow.
+
+LLFI, which contains LLVM 3.4 and its related software (such as clang), is the key dependency for LLVM IR-level fault injection in FLOWERY workflow.
+The commands for installing LLFI can be checked as below:
+```bash
+# Download LLFI source code
+git clone https://github.com/DependableSystemsLab/LLFI.git
+
+# Quick install LLFI & LLVM 3.4
+cd $WHERE_YOU_INSTALL_LLFI$/installer/
+python3 InstallLLFI.py --noGUI
+
+# Add LLVM/LLFI executable binary path to local environment
+echo "export PATH=$PATH:$WHERE_YOU_INSTALL_LLFI$/installer/llvm/bin/" >> ~/.bashrc
+echo "export PATH=$PATH:$WHERE_YOU_INSTALL_LLFI$/installer/llfi/bin/" >> ~/.bashrc
+```
+
+PINFI, which builds on Intel PIN tool v-3.5, is made by [Dependable Systems Lab@UBC](https://blogs.ubc.ca/dependablesystemslab/).
+It can perform assembly-level fault injection in FLOWERY workflow.
+Here we use a pinfi version that has optimized Python scripts, and the intallation commands can be checked as below.
+```bash
+# Download forked PINFI source code along with PIN v3.5 toolkit
+git clone https://github.com/hyfshishen/pinfi.git
+
+# Luckily, no building process is needed
+
+# Add PIN executable binary path to locla environment
+echo "export PATH=$PATH:$WHERE_YOU_INSTALL_PINFI$" >> ~/.bashrc
+```
 
 ## Benchmark Info
 > In the following benchmark table:
