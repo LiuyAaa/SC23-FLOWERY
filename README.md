@@ -135,7 +135,7 @@ Results in this section refers to Figure 17 in paper. We here use pathfinder as 
     ```bash
     python run.py pathfinder
     ```
-Note that only FLOWERY results in Figure 17 will be printed here, the Baseline (i.e. existing SID method) results can be found in Figure 2 (Section V).
+Note that only FLOWERY results in Figure 17 will be printed here, the Baseline (i.e. original instruction duplication method) results can be found in Figure 2 (Section V).
 
 ## Contributor
 - Main contributor: [Zhengyang He]() from the University of Iowa.
