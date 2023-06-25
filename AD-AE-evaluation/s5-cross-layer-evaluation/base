@@ -1,0 +1,3 @@
+cp -r ~/original/Benchmark3.4-Origin/$1 ./$1-code
+cp -r ~/original/FI-base/LLFI-base-Origin/$1 ./$1-LLFI
+cp -r ~/original/FI-base/Pinfi-base-Origin/$1 ./$1-Pinfi

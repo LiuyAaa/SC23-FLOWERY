@@ -1,0 +1,24 @@
+cp -r ~/original/Benchmark3.4-Origin/$1 ./$1-code
+cd $1-code
+opt -load ./SelectiveInstructionDuplication.so ./$1-llfi_index.ll -bishe_insert -select_set_file=$1-$2.txt -o $1-$2.ll
+llvm-link $1-$2.ll external.ll -o $1-$2.ll
+llvm-dis $1-$2.ll -o $1-$2.ll
+clang++ $1-$2.ll -o $1-$2
+cd ../
+cp -r ~/original/FI-base/LLFI-base-Origin/$1 ./$1-LLFI
+cp $1-code/$1-$2.ll $1-LLFI/base/
+cd $1-LLFI
+rm -rf fi-0/
+python runFiForInputs.py $1-$2 "1000 10" 1
+cd ../
+cp -r ~/original/FI-base/Pinfi-base-Origin/$1 ./$1-Pinfi
+cp $1-code/$1-$2 $1-Pinfi/
+cp -r $1-Pinfi ~/pinfi/source/tools/pinfi/
+cd ~/pinfi/source/tools/pinfi/$1-Pinfi
+bash clean
+python faultinject.py $1-$2 10 "1000 10"
+python GetRate.py
+cp -r SDC-number.txt ~/SC23/AD-AE-evaluation/s2-preliminary/
+cd ~/SC23/AD-AE-evaluation/s2-preliminary
+cp $1-LLFI/fi-0/SDC-number.txt ./SDC-LLFI.txt
+cat SDC-number.txt SDC-LLFI.txt >> result.txt

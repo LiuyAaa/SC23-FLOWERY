@@ -1,0 +1,1 @@
+rm -rf baseline activate error_output pin.instcount.txt prog_output pintool.log SDC-number.txt

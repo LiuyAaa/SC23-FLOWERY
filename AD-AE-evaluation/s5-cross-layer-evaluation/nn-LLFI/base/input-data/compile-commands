@@ -1,0 +1,1 @@
+clang hurricanegen.c -o hurricanegen
