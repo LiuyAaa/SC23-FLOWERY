@@ -98,6 +98,45 @@ In this repository, please make sure you use *Name (in Code)*: while running the
 ## Reproducing Paper Results
 > This section is for SC'23 AD/AE review steps.
 
+We provide step by step commands for running FLOWERY and result-generation scripts.
+There are two key evaluations in this paper:
+- **Figure 2 in Section V**: This is showing the inconsistency of instruction duplication techinque in IR level and assembly level.
+- **Figure 17 in Section VII**: This is showing FLOWERY in mitigating the inconsistency of instruction duplication techinque in IR level and assembly level.
+
+The time-cost is different across different benchmarks, which can be found in Table above. Besides, please use *Name in Code* (also shown in above Table) to execute each benchmark. Before you start, please download the FLOWERY code by following commands:
+```bash
+git clone https://github.com/hyfshishen/SC23-FLOWERY.git
+```
+
+### Section V - Preliminary Study
+Results in this section refers to Figure 2 in paper.
+1. Change directory to the folder related to Section V.
+    ```bash
+    cd AD-AE-evaluation/s5-cross-layer-evaluation
+    ```
+2. Execute scripts for running and results colelction. This step contains massive fault-injection experiments and may take you some time. After that the results will be printed automatically.
+    ```bash
+    python run.py BENCHMARK-NAME-IN-CODE
+    # e.g.:
+    #   python3 run.py pathfinder
+    #   python3 run.py nn
+    #   python3 run.py needle
+    #   python3 run.py lud
+    #   ......
+    ```
+
+### Section VII  - Evaluation
+Results in this section refers to Figure 17 in paper. We here use pathfinder as example, other benchmarks are totally the same.
+1. Change directory to the folder related to Section VII.
+    ```bash
+    cd AD-AE-evaluation/s7-evaluation
+    ```
+2. Random fault injection experiments for evaluating the FLOWERY in assembly level. This step contains massive fault-injection experiments and may take you some time. After that the results will be printed automatically.
+    ```bash
+    python run.py pathfinder
+    ```
+Note that only FLOWERY results in Figure 17 will be printed here, the Baseline (i.e. existing SID method) results can be found in Figure 2 (Section V).
+
 ## Contributor
 - Main contributor: [Zhengyang He]() from the University of Iowa.
 - Other contributor: [Yafan Huang](https://hyfshishen.github.io/), who helps organize this repository, from the University of Iowa.
