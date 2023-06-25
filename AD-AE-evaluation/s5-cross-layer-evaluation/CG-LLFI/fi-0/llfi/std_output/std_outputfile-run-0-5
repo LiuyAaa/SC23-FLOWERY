@@ -1,0 +1,45 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-SER-C) - CG Benchmark
+
+ Size:        1400
+ Iterations:    15
+
+
+   iteration           ||r||                 zeta
+        1       2.29962222621805E-12     9.9986441712659
+        2       1.81270917172622E-14     8.5733411508375
+        3       5.14416400771199E-15     8.5954634970863
+        4       2.73566626076740E-15     8.5970095047447
+        5       2.25329647518290E-15     8.5971671238943
+        6       1.84521663498558E-15     8.5971866183001
+        7       2.01768585876820E-15     8.5971892499135
+        8       1.82238742923917E-15     8.5971896206799
+        9       1.97275989535958E-15     8.5971896739827
+       10       1.96247977635848E-15     8.5971896816513
+       11       1.96866094490899E-15     8.5971896827201
+       12       1.83072089646157E-15     8.5971896828524
+       13       1.76353689837685E-15     8.5971896828618
+       14       1.79083282800206E-15     8.5971896828594
+       15       2.00287907343645E-15     8.5971896828576
+ Benchmark completed
+ VERIFICATION FAILED
+ Zeta                 8.5971896828576E+00
+ The correct zeta is  8.5971775078648E+00
+
+
+ CG Benchmark Completed.
+ Class           =                        S
+ Size            =                     1400
+ Iterations      =                       15
+ Operation type  =           floating point
+ Verification    =             UNSUCCESSFUL
+ Version         =                    3.3.1
+
+--------------------------------------
+ Please send all errors/feedbacks to:
+ Center for Manycore Programming
+ cmp@aces.snu.ac.kr
+ http://aces.snu.ac.kr
+--------------------------------------
+

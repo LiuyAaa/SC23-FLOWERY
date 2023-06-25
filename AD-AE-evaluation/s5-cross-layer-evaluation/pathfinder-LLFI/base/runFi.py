@@ -10,7 +10,7 @@ appName = bmName.split('-')[0]
 def get_SDC_number():
     temp_path = "./llfi/"
     file_gld_out = temp_path + "baseline/golden_std_output"
-    run_count = 100
+    run_count = 1000
     SDC_count = 0
     benign_count = 0
     crash_count = 0

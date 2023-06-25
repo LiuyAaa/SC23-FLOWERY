@@ -9,7 +9,7 @@ import filecmp
 # get the SDC rate of given instruction
 def get_SDC_number():
     temp_path = ""
-    file_gld_out = temp_path + "baseline/output.txt"
+    file_gld_out = temp_path + "baseline/output.dat"
     run_count = 1000
     SDC_count = 0
     benign_count = 0

@@ -20,7 +20,7 @@ def get_SDC_number():
     rsi = 0
     # print("\rChecking files in " + temp_path + " ......")
     for f in range(run_count):
-        file_out = temp_path + "prog_output" + "/outputfile-" + str(f)
+        file_out = temp_path + "prog_output" + "/output-" + str(f) + ".txt"
         try:
             file_err = open(temp_path + "error_output" + "/errorfile-" + str(f))
             error_msg = file_err.read()

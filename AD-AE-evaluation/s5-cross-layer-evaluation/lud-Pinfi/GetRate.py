@@ -9,7 +9,7 @@ import filecmp
 # get the SDC rate of given instruction
 def get_SDC_number():
     temp_path = ""
-    file_gld_out = temp_path + "baseline/output.txt"
+    file_gld_out = temp_path + "baseline/golden_output"
     run_count = 1000
     SDC_count = 0
     benign_count = 0
@@ -17,7 +17,7 @@ def get_SDC_number():
     hang_count = 0
     # print("\rChecking files in " + temp_path + " ......")
     for f in range(run_count):
-        file_out = temp_path + "prog_output" + "/output-" + str(f) + ".txt"
+        file_out = temp_path + "prog_output" + "/outputfile-" + str(f) 
         try:
             file_err = open(temp_path + "error_output" + "/errorfile-" + str(f))
             error_msg = file_err.read()

@@ -1,0 +1,2 @@
+fi_cycle=1506329499
+fi_type=bitflip

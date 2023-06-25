@@ -1,0 +1,11 @@
+
+
+ NAS Parallel Benchmarks (NPB3.3-SER-C) - CG Benchmark
+
+ Size:        1400
+ Iterations:    15
+
+
+   iteration           ||r||                 zeta
+        1       1.35593142916122E-13     9.9986441579140
+**********************SDC DETECTED!check-flag**********************

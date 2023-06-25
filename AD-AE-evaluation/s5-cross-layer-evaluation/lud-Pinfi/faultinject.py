@@ -14,7 +14,7 @@ currdir = "./"
 progbin = currdir
 pinbin = "pin"
 instcategorylib = "../../obj-intel64/instcategory.so"
-instcountlib = "../../bj-intel64/instcount.so"
+instcountlib = "../../obj-intel64/instcount.so"
 filib = "../../obj-intel64/faultinjection.so"
 #inputfile = currdir + "/inputs/input.2048"
 outputdir = currdir + "/prog_output"
@@ -77,7 +77,7 @@ def main():
   execlist = [pinbin, '-t', instcountlib, '--', progbin]
   execlist.extend(optionlist)
   execute(execlist)
-  #os.system("mv output.txt baseline/")
+  os.system("mv output.txt baseline/")
   # # fault injection
   for index in range(0, run_number):
     outputfile = outputdir + "/outputfile-" + str(index)
@@ -85,7 +85,7 @@ def main():
     execlist = [pinbin, '-t', filib, '-fioption', 'AllInst', '--', progbin]
     execlist.extend(optionlist)
     ret = execute(execlist)
-    #os.system("mv output.txt prog_output/output-" + str(index) + ".txt")
+    os.system("mv output.txt prog_output/output-" + str(index) + ".txt")
 
     if ret == "timed-out":
       error_File = open(errorfile, 'w')
