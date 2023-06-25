@@ -100,7 +100,7 @@ In this repository, please make sure you use *Name (in Code)*: while running the
 
 We provide step by step commands for running FLOWERY and result-generation scripts.
 There are two key evaluations in this paper:
-- **Figure 2 in Section V**: This is showing the inconsistency of instruction duplication techinque in IR level and assembly level.
+- **Figure 2 in Section V**: This is showing the inconsistency of instruction duplication technique in IR level and assembly level.
 - **Figure 17 in Section VII**: This is showing FLOWERY in mitigating the inconsistency of instruction duplication techinque in IR level and assembly level.
 
 The time-cost is different across different benchmarks, which can be found in Table above. Besides, please use *Name in Code* (also shown in above Table) to execute each benchmark. Before you start, please download the FLOWERY code by following commands:
