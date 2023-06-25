@@ -78,13 +78,13 @@ In this repository, please make sure you use *Name (in Code)*: while running the
 | [Backprop](https://github.com/JuliaParallel/rodinia/tree/master/openmp/backprop)      | backprop    | Rodinia  | Machine Learning    | 65536            | 1680 | 148.20B  |
 | [BFS](https://github.com/JuliaParallel/rodinia/tree/master/openmp/bfs)                | bfs         | Rodinia  | Graph Algorithm     | graph1M.txt      | 383  | 527.92B  |
 | [Pathfinder](https://github.com/JuliaParallel/rodinia/tree/master/openmp/pathfinder)  | pathfinder  | Rodinia  | Dynamic Programming | 1000 10          | 372  | 0.6B     |
-| [LUD](https://github.com/JuliaParallel/rodinia/tree/master/openmp/lud)                | lu          | Rodinia  | Linear Algebra      | -v -s 256        | 1161 | 59.16B   |
+| [LUD](https://github.com/JuliaParallel/rodinia/tree/master/openmp/lud)                | lud         | Rodinia  | Linear Algebra      | -v -s 256        | 1161 | 59.16B   |
 | [Needle](https://github.com/JuliaParallel/rodinia/tree/master/openmp/nw)              | needle      | Rodinia  | Dynamic Programming | 2048 10 2        | 1069 | 593.39B  |
 | [kNN](https://github.com/JuliaParallel/rodinia/tree/master/openmp/nn)                 | nn          | Rodinia  | Machine Learning    |filelist.txt 5 30 90 |349| 206.44B  |
 | [EP](https://www.nas.nasa.gov/software/npb.html)                                      | EP          | NPB      | Parallel Computing  |                  | 912  | 4904.50B |
 | [CG](https://www.nas.nasa.gov/software/npb.html)                                      | CG          | NPB      | Gradient Algorithm  |                  | 2290 | 721.95B  |
 | [IS](https://www.nas.nasa.gov/software/npb.html)                                      | IS          | NPB      | Sorting Algorithm   |                  | 967  | 43.97B   |
-| [FFT2](https://github.com/embecosm/mibench/tree/master/telecomm/FFT)                  | ff2         | MiBench  | Signal Processing   | 4 4096           | 744  | 3.24B    |
+| [FFT2](https://github.com/embecosm/mibench/tree/master/telecomm/FFT)                  | fft2        | MiBench  | Signal Processing   | 4 4096           | 744  | 3.24B    |
 | [Quicksort](https://github.com/embecosm/mibench/tree/master/automotive/qsort)         | qsort       | MiBench  | Sorting Algorithm   | input_small.dat  | 92   | 1.98B    |
 | [Basicmath](https://github.com/embecosm/mibench/tree/master/automotive/basicmath)     | basicmath   | MiBench  | Mathematical Calculations  |           | 532  | 2.80B    |
 | [Susan](https://github.com/embecosm/mibench/tree/master/automotive/susan)             | susan       | MiBench  | Image Recognition   | input_small.pgm output.txt -s | 1578 | 42.30B |
