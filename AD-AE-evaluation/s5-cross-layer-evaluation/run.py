@@ -18,10 +18,10 @@ for i in level:
 os.system("opt -load ./SelectiveInstructionDuplication.so ./" + appName + "-llfi_index.ll -bishe_insert -select_set_file=" + appName + "-1.0.txt -o " + appName + "-1.0.ll")
 os.system("llvm-link external.ll " + appName + "-1.0.ll -o " + appName + "-1.0.ll")
 os.system("clang++ " + appName + "-1.0.ll -o " + appName + "-1.0")
-os.system("clang++ " + appName + ".ll -o " + appName)
+os.system("clang++ " + appName + "-llfi_index.ll -o " + appName)
 os.system("mv " + appName + "-1.0.ll" + " ../" + appName + "-LLFI/base")
 os.system("mv " + appName + "-1.0" + " ../" + appName + "-Pinfi")
-os.system("mv " + appName + ".ll" + " ../" + appName + "-LLFI/base")
+os.system("cp " + appName + "-llfi_index.ll" + " ../" + appName + "-LLFI/base/" + appName + ".ll")
 os.system("mv " + appName + " ../" + appName + "-Pinfi/")
 
 
@@ -61,9 +61,11 @@ os.system("rm -rf fi-0")
 os.chdir("../")
 #Assembly level fault injection
 t = 0
+os.system("rm -rf PINFI")
 os.system("mkdir PINFI")
 os.system("cp -r " + appName + "-Pinfi PINFI/")
-os.system("cp -r PINFI " + "~/pinfi/source/tools/pinfi/")
+os.system("rm -rf ../../../pinfi/source/tools/pinfi/PINFI")
+os.system("cp -r PINFI " + "../../../pinfi/source/tools/pinfi/")
 os.chdir("../../../pinfi/source/tools/pinfi/PINFI/" + appName + "-Pinfi")
 os.system("rm -rf baseline activate error_output pin.instcount.txt prog_output pintool.log SDC-number.txt")
 os.system("python faultinject.py " + appName + " 1000 \"" + inputl + "\"")
