@@ -1,5 +1,7 @@
 # FLOWERY Workflow
 
+[![DOI](https://zenodo.org/badge/656308915.svg)](https://zenodo.org/badge/latestdoi/656308915)
+
 ## Contents
 1. [Introduction](#introduction)
 2. [Environment Configuration](#environment-configuration)
