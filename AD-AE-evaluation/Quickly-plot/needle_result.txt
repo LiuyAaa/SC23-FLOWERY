@@ -1,0 +1,21 @@
+Benchmark: needle
+======30 Protertion level======
+IR level SDC coverage: 96%
+Assembly level SDC coverage: 42%
+New Assembly SDC coverage: 92%
+
+======50 Protertion level======
+IR level SDC coverage: 96%
+Assembly level SDC coverage: 27%
+New Assembly SDC coverage: 88%
+
+======70 Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 54%
+New Assembly SDC coverage: 92%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 54%
+New Assembly SDC coverage: 92%
+

@@ -1,0 +1,21 @@
+Benchmark: crc32
+======30 Protertion level======
+IR level SDC coverage: 74%
+Assembly level SDC coverage: 66%
+New Assembly SDC coverage: 78%
+
+======50 Protertion level======
+IR level SDC coverage: 89%
+Assembly level SDC coverage: 72%
+New Assembly SDC coverage: 93%
+
+======70 Protertion level======
+IR level SDC coverage: 97%
+Assembly level SDC coverage: 76%
+New Assembly SDC coverage: 94%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 86%
+New Assembly SDC coverage: 99%
+

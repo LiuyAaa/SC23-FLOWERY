@@ -1,0 +1,21 @@
+Benchmark: lud
+======30 Protertion level======
+IR level SDC coverage: 77%
+Assembly level SDC coverage: 64%
+New Assembly SDC coverage: 86%
+
+======50 Protertion level======
+IR level SDC coverage: 91%
+Assembly level SDC coverage: 71%
+New Assembly SDC coverage: 86%
+
+======70 Protertion level======
+IR level SDC coverage: 96%
+Assembly level SDC coverage: 78%
+New Assembly SDC coverage: 96%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 84%
+New Assembly SDC coverage: 97%
+

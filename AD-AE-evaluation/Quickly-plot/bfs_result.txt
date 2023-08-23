@@ -1,0 +1,21 @@
+Benchmark: bfs
+======30 Protertion level======
+IR level SDC coverage: 62%
+Assembly level SDC coverage: 32%
+New Assembly SDC coverage: 89%
+
+======50 Protertion level======
+IR level SDC coverage: 67%
+Assembly level SDC coverage: 53%
+New Assembly SDC coverage: 87%
+
+======70 Protertion level======
+IR level SDC coverage: 77%
+Assembly level SDC coverage: 53%
+New Assembly SDC coverage: 91%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 69%
+New Assembly SDC coverage: 94%
+

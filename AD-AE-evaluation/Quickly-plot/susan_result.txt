@@ -1,0 +1,21 @@
+Benchmark: susan
+======30 Protertion level======
+IR level SDC coverage: 76%
+Assembly level SDC coverage: 76%
+New Assembly SDC coverage: 92%
+
+======50 Protertion level======
+IR level SDC coverage: 94%
+Assembly level SDC coverage: 80%
+New Assembly SDC coverage: 95%
+
+======70 Protertion level======
+IR level SDC coverage: 99%
+Assembly level SDC coverage: 86%
+New Assembly SDC coverage: 98%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 86%
+New Assembly SDC coverage: 99%
+

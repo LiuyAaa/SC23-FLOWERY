@@ -1,0 +1,21 @@
+Benchmark: pathfinder
+======30 Protertion level======
+IR level SDC coverage: 94%
+Assembly level SDC coverage: 55%
+New Assembly SDC coverage: 90%
+
+======50 Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 66%
+New Assembly SDC coverage: 95%
+
+======70 Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 74%
+New Assembly SDC coverage: 94%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 79%
+New Assembly SDC coverage: 93%
+

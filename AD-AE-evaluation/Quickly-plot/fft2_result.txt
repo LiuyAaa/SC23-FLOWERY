@@ -1,0 +1,21 @@
+Benchmark: fft2
+======30 Protertion level======
+IR level SDC coverage: 73%
+Assembly level SDC coverage: 62%
+New Assembly SDC coverage: 86%
+
+======50 Protertion level======
+IR level SDC coverage: 95%
+Assembly level SDC coverage: 72%
+New Assembly SDC coverage: 86%
+
+======70 Protertion level======
+IR level SDC coverage: 96%
+Assembly level SDC coverage: 68%
+New Assembly SDC coverage: 83%
+
+======full Protertion level======
+IR level SDC coverage: 98%
+Assembly level SDC coverage: 82%
+New Assembly SDC coverage: 91%
+

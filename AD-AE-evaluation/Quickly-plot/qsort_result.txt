@@ -1,0 +1,21 @@
+Benchmark: qsort
+======30 Protertion level======
+IR level SDC coverage: 85%
+Assembly level SDC coverage: 47%
+New Assembly SDC coverage: 83%
+
+======50 Protertion level======
+IR level SDC coverage: 96%
+Assembly level SDC coverage: 49%
+New Assembly SDC coverage: 87%
+
+======70 Protertion level======
+IR level SDC coverage: 99%
+Assembly level SDC coverage: 56%
+New Assembly SDC coverage: 91%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 56%
+New Assembly SDC coverage: 85%
+

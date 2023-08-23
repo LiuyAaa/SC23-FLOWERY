@@ -1,0 +1,21 @@
+Benchmark: patricia
+======30 Protertion level======
+IR level SDC coverage: 91%
+Assembly level SDC coverage: 38%
+New Assembly SDC coverage: 85%
+
+======50 Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 38%
+New Assembly SDC coverage: 77%
+
+======70 Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 38%
+New Assembly SDC coverage: 77%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 54%
+New Assembly SDC coverage: 85%
+

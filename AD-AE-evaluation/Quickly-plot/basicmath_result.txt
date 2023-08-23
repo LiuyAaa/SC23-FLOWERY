@@ -1,0 +1,21 @@
+Benchmark: basicmath
+======30 Protertion level======
+IR level SDC coverage: 70%
+Assembly level SDC coverage: 53%
+New Assembly SDC coverage: 78%
+
+======50 Protertion level======
+IR level SDC coverage: 87%
+Assembly level SDC coverage: 53%
+New Assembly SDC coverage: 76%
+
+======70 Protertion level======
+IR level SDC coverage: 94%
+Assembly level SDC coverage: 58%
+New Assembly SDC coverage: 79%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 60%
+New Assembly SDC coverage: 82%
+

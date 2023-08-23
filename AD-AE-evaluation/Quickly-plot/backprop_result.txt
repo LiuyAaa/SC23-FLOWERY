@@ -1,0 +1,21 @@
+Benchmark: backprop
+======30 Protertion level======
+IR level SDC coverage: 81%
+Assembly level SDC coverage: 41%
+New Assembly SDC coverage: 75%
+
+======50 Protertion level======
+IR level SDC coverage: 86%
+Assembly level SDC coverage: 52%
+New Assembly SDC coverage: 75%
+
+======70 Protertion level======
+IR level SDC coverage: 86%
+Assembly level SDC coverage: 52%
+New Assembly SDC coverage: 75%
+
+======full Protertion level======
+IR level SDC coverage: 100%
+Assembly level SDC coverage: 73%
+New Assembly SDC coverage: 91%
+
