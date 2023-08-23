@@ -12,7 +12,7 @@ def parse_file(file_path):
 
 def generate_graph(benchmark, data):
     x = [0, 30, 50, 100]
-    labels = ["IR level SDC coverage", "Assembly level SDC coverage", "New Assembly SDC coverage"]
+    labels = ["EDDI IR level SDC coverage", "EDDI Assembly level SDC coverage", "FLOWERY Assembly SDC coverage"]
 
     for i, label in enumerate(labels):
         plt.plot(x, [line[i] for line in data], marker='o', label=label)
@@ -24,7 +24,7 @@ def generate_graph(benchmark, data):
     plt.yticks(range(0, 101, 10))
     plt.legend()
     plt.grid(True)
-    plt.savefig(f"{benchmark}_graph.png")
+    plt.savefig(f"{benchmark}_fig.png")
     plt.clf()
 
 def main():
@@ -38,7 +38,7 @@ def main():
         if os.path.exists(file_path):
             data = parse_file(file_path)
             generate_graph(benchmark, data)
-            print(f"Generated graph for {benchmark}")
+            print(f"Generating figure for {benchmark}...")
         else:
             print(f"File not found for {benchmark}")
 
