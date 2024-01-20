@@ -12,10 +12,16 @@
 6. [Citation](#citation)
 
 ## Introduction
-> This section slightly introduces FLOWERY workflow. To be updated soon.
+Soft errors are prevalent in modern High-Performance Computing (HPC) systems, resulting in silent data corruptions (SDCs), compromising system reliability. 
+Instruction duplication is a widely used software-based protection technique against SDCs. Existing instruction duplication techniques are mostly implemented at LLVM level and may suffer from low SDC coverage at assembly level. 
+In this paper, we evaluate instruction duplication at both LLVM and assembly levels. 
+Our study shows that existing instruction duplication techniques have protection deficiency at assembly level and are usually over-optimistic in the protection.  
+We investigate the root-causes of the protection deficiency and propose a mitigation technique, Flowery, to solve the problem. Our evaluation shows that Flowery can effectively protect programs from SDCs evaluated at assembly level.
+To know more about how **Flowery** works, you may refer to our [SC'23 paper](https://hyfshishen.github.io/publications/SC23b-paper.pdf).
+
 
 ## Environment Configuration
-> Before configuring the environments, please **make sure you are using Intel CPU** and your CPU supports at least 20 threads (checking by "nproc"). There are two reasons: (1) Our assembly-level fault injection tool is tied to Intel PIN, which is a dynamic instrumentation tool for assembly code for Intel CPU; and (2)  fault injection experiments are usually time-consuming and should be accelerated in parallel.
+Before configuring the environments, please **make sure you are using Intel CPU** and your CPU supports at least 20 threads (checking by "nproc"). There are two reasons: (1) Our assembly-level fault injection tool is tied to Intel PIN, which is a dynamic instrumentation tool for assembly code for Intel CPU; and (2)  fault injection experiments are usually time-consuming and should be accelerated in parallel.
 
 There are two methods to configure environments for FLOWERY: one is using the Docker image we prepared, the other one is manually setting up environments on your local Ubuntu 16.04 machine. **We highly recommend you use the Docker image we prepared**, because all the dependencies are already configured on that. Very easy to use :)! Please do not use zsh to run the scripts, since it will automatically shutdown some fault injection campaigns.
 
@@ -144,4 +150,12 @@ Note that only FLOWERY results in Figure 17 will be printed here, the Baseline (
 - Other contributor: [Yafan Huang](https://hyfshishen.github.io/), who helps organize this repository, from the University of Iowa.
 
 ## Citation
-> To be updated soon.
+```bibtex
+@inproceedings{he2023demystifying,
+    title={Demystifying and mitigating cross-layer deficiencies of soft error protection in instruction duplication},
+    author={He, Zhengyang and Huang, Yafan and Xu, Hui and Tao, Dingwen and Li, Guanpeng},
+    booktitle={Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+    pages={1--13},
+    year={2023}
+}
+```
